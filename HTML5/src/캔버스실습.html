@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Canvas 확인 </h1>
+    <canvas id = "myCanvas" width="300px" height="500px" style="border: 3px solid #FF5E00;">
+    </canvas>
+
+    <script>
+        let paper = document.getElementById("myCanvas");
+        let context = paper.getContext("2d");
+
+        let grdline = context.createLinearGradient(10,50,170,50);
+        //Linear 선형그라디언트 (시작x,y , 끝 x,y)
+        grdline.addColorStop(0,"blue");
+        grdline.addColorStop(1,"white");
+        
+
+        context.fillStyle = grdline;
+        context.fillRect(20,20,200,80);
+
+        context.font="30px Arial";
+        context.fillStyle="#ffffff";
+        context.fillText("CANVAS", 30, 60);
+
+        context.fillStyle=grdlind;
+        context.fillText("CANVAS", 40, 80);
+
+    
+
+    </script>
+
+</body>
+</html>
